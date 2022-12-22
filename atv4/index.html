@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src='js/funcao_js.js'></script>
+    <script src='js/scriptCep.js'></script>
+
+    <title>Document</title>
+</head>
+<body onload="inicia()">
+
+    <div id="espaco_cabecalho">
+    </div>
+
+    <!-- Working with JS: Tales-->
+    <div id="espaco_tabela">
+        <button id="btn_carrega_tabela" onclick="funcao_carrega_tabela()">
+            Primary
+        </button>
+    </div>
+
+    <!-- Adding JS files on the HTMl code-->
+    <script>
+        
+
+        //You can code here
+        //And may use the console on your navegator-web too
+
+        /* 
+        //Part 01: Using Alerts
+        console.log('Maravilha');
+        //ploting datatime on your page
+        let data = new Date();
+        alert('Hoje é dia: '+ data); //interaction without the use of console
+        console.log("Part 01 - Check");
+        */
+        
+        //main commands of DOM Elements
+        //getElementById
+        //documentElement
+        //getElementByTagName     -and etc
+
+        /* 
+        //Part 02: Creating Texts
+        const paragrafo = document.createElement('p');
+        paragrafo.innerText = 'Elemento foi criado com sucesso';
+        document.body.appendChild(paragrafo);
+        console.log("Part 02 - Check");
+        */
+
+        /*
+        //Part 03: Creating Divs
+        let espaco_cabecalho = document.getElementById('espaco_cabecalho');
+        const cab_1 = document.createElement('h1');
+        cab_1.innerText = 'Palmeiras campeão!!';
+        espaco_cabecalho.appendChild(cab_1); //Manipulating the variable of the Div
+        console.log("Part 03 - Check");
+        */
+
+    </script>
+
+    <!-- Working with JS: Forms-->
+
+    <form method="get" action=".">
+        <label>Cep:
+            <input name="cep" type="text" id="cep" value=""
+            size="10" maxlength="9" onblur="pesquisacep(this.value);"><br />
+        </label>
+
+        <label>Rua:
+            <input name="rua" type="text" id="rua" size="60">
+        </label><br /> <!--using br u can jump a line-->
+
+        <label>Bairro:
+            <input name="bairro" type="text" id="bairro" size="40">
+        </label><br /> 
+
+        <label>Cidade:
+            <input name="cidade" type="text" id="cidade" size="40">
+        </label><br /> 
+
+        <label>Estado:
+            <input name="estado" type="text" id="uf" size="2">
+        </label><br /> 
+
+        <label>IBGE:
+            <input name="ibge" type="text" id="ibge" size="8">
+        </label><br /> 
+    </form>
+
+</body>
+</html>
